@@ -13,7 +13,7 @@ btn.addEventListener('click', () => {
                         appendParagraph();
                 }else{
                         output.innerText = '';
-                        updatedStatus = false;
+                        appendParagraph();
                 }
         }
 
