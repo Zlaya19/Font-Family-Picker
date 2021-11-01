@@ -56,13 +56,13 @@ btn.addEventListener('click', () => {
                 if(radioBtn === 'font4'){
                         paragraph.style.fontFamily = 'impact';
                 }
-                if(radioBtn === 'font5'){
+               /*  if(radioBtn === 'font5'){
                         paragraph.style.fontFamily = 'geneva';
-                }
-                if(radioBtn === 'font6'){
+                } */
+                if(radioBtn === 'font5'){
                         paragraph.style.fontFamily = 'tahoma';
                 }
-                if(radioBtn === 'font7'){
+                if(radioBtn === 'font6'){
                         paragraph.style.fontFamily = 'georgia';
                 }
 
