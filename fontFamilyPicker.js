@@ -1,3 +1,4 @@
+//  We create access variables with the getElementByIs method
 
 const btn = document.getElementById('btn');
 const area = document.getElementById('area');
@@ -11,11 +12,9 @@ btn.addEventListener('click', () => {
 
         var slider = document.getElementById('font-size');
 
-        /* slider.addEventListener('input', function() {
-        var size = slider.value;
-        // this sets the body's font size property, but you can set whatever you need to
-        area.style.fontSize = size + "px";
-        }); */
+        /*  the checkStatus function checks if the updateStatus is false or true. 
+        false starts the appendParagraph function and true does the same after setting
+        the output as an empty div */
 
         checkStatus();
 
@@ -28,21 +27,29 @@ btn.addEventListener('click', () => {
                 }
         }
 
+        /* The appendParagraph function sets the output opacity to 1, to get the div visible. 
+        Then we create a h2 element with the innerText of the area value and a classList. */
 
         function appendParagraph(){
 
+                // gives us the only chacked radio button and put it to the radioBtn variable
                 const radioBtn = document.querySelector('input[name="radioBtn"]:checked').value;
 
                 output.style.opacity = 1;
                 let paragraph = document.createElement('h2');
                 paragraph.innerText = area.value;
                 paragraph.classList.add('class_list');
-                
+
+                /* The sliderFont function returns the slider value with appended 'px'.
+                We call this function to style the font size of the paragraph element. */
+
                 function sliderFont() {
                         return slider.value  + 'px';
                       }
 
                 paragraph.style.fontSize = sliderFont();
+
+                // every radioButton has its own font style
 
                 if(radioBtn === 'font1'){
                         paragraph.style.fontFamily = 'verdana';
@@ -65,6 +72,8 @@ btn.addEventListener('click', () => {
                 if(radioBtn === 'font6'){
                         paragraph.style.fontFamily = 'georgia';
                 }
+
+        // At the end we append the last paragraph element with user-defined information to the output div
 
         output.appendChild(paragraph);
         updatedStatus = true;
