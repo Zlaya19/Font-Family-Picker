@@ -111,6 +111,14 @@ input[type="radio"] {
     box-shadow: 0 0 14px 1px #444, 0 0 14px 1px #444;
     opacity: 0;
     padding:  20px 40px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: normal;
+    line-break: strict;
+    hyphens: none;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
 }
 
 .class_list {
